@@ -140,28 +140,60 @@ $("document").ready(function(){
 		    var d2={}
 		    var d3={}
 		    var d4={}
+		    var trans1={}
+		    var trans2 = {}
+		    var trans3 = {}
+		    var trans4 = {}
 		    console.log("hello")
 		    for(i=0;i<Object.keys(response).length;i++){
 			    t=Object.values(response)[i]
 			    if(i==0){
 				    d1['x'] = t["model"]
 				    d1['y'] = t["metrics"]
+				    d1['orientation'] = 'h'
 				    d1['type'] = 'bar'
+				    
+				    trans1['type'] = 'sort'
+				    trans1['target'] = 'x' 
+				    trans1['order'] = 'ascending'
+				    
+				    d1['transforms'] = [trans1]
 		            }
 			    if(i==1){
 				    d2['x'] =t["model"]
 				    d2['y'] = t["metrics"]
+				    d2['orientation'] = 'h'
 				    d2['type'] = 'bar'
+				    
+				    trans2['type'] = 'sort'
+				    trans2['target'] = 'x' 
+				    trans2['order'] = 'ascending'
+				    
+				    d2['transforms'] = [trans2]
 			    }
 			    if(i==2){
 				    d3['x'] = t["model"]
 				    d3['y'] = t["metrics"]
+				    d3['orientation'] = 'h'
 				    d3['type'] = 'bar'
+				    
+				    trans3['type'] = 'sort'
+				    trans3['target'] = 'x' 
+				    trans3['order'] = 'ascending'
+				    
+				    d3['transforms'] = [trans3]
 			    }
 			  if(i==3){
 				    d4['x']= t["model"]
 				    d4['y'] = t["metrics"]
+				    d4['orientation'] = 'h'
 				    d4['type'] = 'bar'
+				    
+				    trans4['type'] = 'sort'
+				    trans4['target'] = 'x' 
+				    trans4['order'] = 'ascending'
+				    
+				    d4['transforms'] = [trans4]
 			    }
 		    }
 		    
