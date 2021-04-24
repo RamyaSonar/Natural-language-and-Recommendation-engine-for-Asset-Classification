@@ -1,6 +1,5 @@
 from flask import Flask, request, json, render_template
 import pandas as pd
-#from flask_cors import CORS
 import sys
 import ast
 import pickle
